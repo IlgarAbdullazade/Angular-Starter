@@ -1,0 +1,13 @@
+<form
+  [formGroup]="languageForm"
+  class="language">
+  <ng-select
+    formControlName="lang"
+    bindLabel="label"
+    bindValue="id"
+    (change)="setActiveLang($event.id)"
+    [items]="availableLangs"
+    [searchable]="false"
+    [clearable]="false">
+  </ng-select>
+</form>
